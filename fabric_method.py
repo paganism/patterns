@@ -29,6 +29,7 @@ class MSDoc(Doc):
 class PDFDoc(Doc):
     def show(self):
         print('PDF document')
+        
 # fabric method
 class App:
     def create_doc(self, type):
