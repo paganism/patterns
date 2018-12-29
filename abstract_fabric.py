@@ -32,7 +32,7 @@ class Button:
         return self._name
 
 
-class ConcreteFactory1(AbstractFactory):
+class FirstFactory(AbstractFactory):
     def create_window(self):
         return Window('Big Window')
 
@@ -40,7 +40,7 @@ class ConcreteFactory1(AbstractFactory):
         return Button('Big Button')
 
 
-class ConcreteFactory2(AbstractFactory):
+class SecondFactory(AbstractFactory):
     def create_window(self):
         return Window('Small Window')
 
@@ -49,9 +49,9 @@ class ConcreteFactory2(AbstractFactory):
 
 def get_factory(num):
     if num == 0:
-        return ConcreteFactory1()
+        return FirstFactory()
     elif num == 1:
-        return ConcreteFactory2()
+        return SecondFactory()
 
 
 factory = get_factory(1)
